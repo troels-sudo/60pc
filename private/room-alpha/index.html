@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Private investor room (client-side password gating). Do not upload MNPI." />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Room Alpha • 60 Point Capital</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/img/favicon.ico" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container row between middle">
+    <a class="brand" href="/"><span class="brand-mark">60</span> Point Capital</a>
+    <nav class="nav">
+      <a href="/private-access.html">Back to Private Access</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section class="container hero">
+    <span class="tag">For professional clients only</span>
+    <h1>Room Alpha</h1>
+    <p class="small attention">Client-side password gating for basic confidentiality only. Do not upload MNPI or sensitive documents. Use a data room for secure sharing.</p>
+  </section>
+
+  <section class="container section">
+    <!-- Replace data-hash with your SHA-256 hex when ready -->
+    <div id="lock-wrap" data-room="alpha" data-hash="f3993cb5e5f5e9f9c9c62a8c64fb9b7b5f0f0a7bd6f9be8b2d19b1cfb9ea3e7e">
+      <div id="lock-gate" class="card">
+        <h3>Enter password</h3>
+        <form id="lock-form" class="form" autocomplete="off">
+          <input id="lock-password" class="input" type="password" placeholder="Password" required />
+          <button class="btn" type="submit">Enter</button>
+          <p id="lock-error" class="small" style="color: var(--bad)"></p>
+          <p class="small">Demo password: <code>test1234</code>. Replace the hash before launch.</p>
+        </form>
+      </div>
+
+      <div id="lock-content" class="card" hidden>
+        <h3>Documents</h3>
+        <ul class="small">
+          <li><a href="#">Teaser.pdf</a></li>
+          <li><a href="#">Investment Memo.pdf</a></li>
+          <li><a href="#">DD Checklist.pdf</a></li>
+        </ul>
+
+        <h3>Updates</h3>
+        <ul class="small">
+          <li>[2025-11-03] Room created. Documents to be posted after NDA + KYC.</li>
+        </ul>
+
+        <p class="small"><a href="#" id="lock-logout">Log out of this room</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section attention">
+    <p class="small">These pages are set to <code>noindex</code> and blocked in <code>robots.txt</code>. Do not rely on this for security.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-meta small">
+      <span>© 60 Point Capital. All rights reserved.</span>
+      <span>Dubai, UAE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/lock.js"></script>
+</body>
+</html>
