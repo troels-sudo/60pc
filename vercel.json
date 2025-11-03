@@ -12,16 +12,14 @@
       ]
     },
     {
-      "source": "/private/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
-      ]
-    },
-    {
       "source": "/assets/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "max-age=0, no-cache, must-revalidate" }
+        { "key": "Cache-Control", "value": "no-store" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/assets/css/styles.v5.css", "destination": "/assets/css/styles.css" },
+    { "source": "/assets/css/styles.v6.css", "destination": "/assets/css/styles.css" }
   ]
 }
