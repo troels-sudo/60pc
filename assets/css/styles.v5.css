@@ -106,3 +106,18 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 
 /* ---------- Motion pref ---------- */
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto} }
+
+/* collision-proof compliance ribbon */
+.compliance{
+  display:block;
+  margin:0;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-left:4px solid var(--brand-2);
+  border-radius:12px;
+  color:var(--text-dim);
+  background:transparent;
+  box-shadow:none;
+}
+/* optional: if .attention still appears anywhere, neutralize it */
+.attention{background:transparent!important;border:0!important;padding:0!important;margin:16px 0!important;}
