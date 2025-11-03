@@ -16,6 +16,12 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
       ]
+    },
+    {
+      "source": "/assets/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=0, no-cache, must-revalidate" }
+      ]
     }
   ]
 }
