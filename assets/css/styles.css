@@ -192,3 +192,32 @@ html[dir="rtl"] body{
 @media (prefers-reduced-motion:reduce){
   *{scroll-behavior:auto}
 }
+/* ---- 60PC alignment hard-fix ---- */
+section.attention{
+  /* kill any legacy styles */
+  all: unset !important;
+  display: block !important;
+  margin: 16px 0 !important;
+}
+section.attention .container,
+section.attention .section{ all: unset !important; } /* safety if nested */
+
+section.attention > p{
+  display: block !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  border: 1px solid var(--border) !important;
+  border-left: 4px solid var(--brand-2) !important;
+  border-radius: 12px !important;
+  color: var(--text-dim) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ensure hero uses the same left edge as the grid */
+.hero h1,.hero p,.hero .cta-row,.hero .hero-badges{
+  max-width: none !important;
+}
+
+/* optional: tighten vertical gap above the ribbon */
+section.attention{ margin-top: 12px !important; }
