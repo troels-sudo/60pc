@@ -140,3 +140,36 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
   background:transparent !important;
   box-shadow:none !important;
 }
+/* ---- Header CTAs + logo + ribbon fixes ---- */
+
+/* Make compliance ribbon shrink to content and align left */
+.section.attention{ margin:16px 0; padding:0; background:transparent; border:0; text-align:left }
+.section.attention > p{
+  display:inline-flex; align-items:center; gap:.5ch;
+  width:auto; max-width:100%;
+  margin:0; padding:10px 12px;
+  border:1px solid var(--border); border-left:4px solid var(--brand-2);
+  border-radius:12px; background:transparent; color:var(--text-dim); box-shadow:none
+}
+
+/* Header buttons */
+.nav a{ font-weight:500 }                 /* regular weight for all nav links */
+.nav .btn-outline{ font-weight:500 }      /* “Hire Us” not bold */
+.nav .btn{ color:#000 !important }        /* “Contact” text black */
+
+/* If HTML still has class="btn btn-outline" on Hire Us, neutralize gradient */
+.nav .btn-outline.btn{
+  background:transparent !important;
+  border:1px solid var(--border) !important;
+  color:var(--text) !important;
+}
+
+/* Logo badge tune for cleaner “60” */
+.brand-mark{
+  width:30px; height:30px; border-radius:8px;
+  display:grid; place-items:center;
+  font-weight:900; font-size:14px; letter-spacing:0;
+  color:#001015;
+  background:linear-gradient(135deg,var(--brand-2),var(--brand));
+  box-shadow:0 0 0 1px rgba(255,255,255,.06) inset;
+}
