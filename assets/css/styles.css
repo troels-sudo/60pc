@@ -1,32 +1,11 @@
-/* 60 Point Capital — Global Styles
-   Mobile-first. System fonts. Dark UI. RTL-ready. */
+/* 60 Point Capital — Global Styles */
 
 /* ---------- Tokens ---------- */
 :root{
-  /* Color system */
-  --bg:#0b0e13;
-  --muted:#10141c;
-  --card:#0f131a;
-  --text:#e7edf3;
-  --text-dim:#b7c2cf;
-  --border:#212837;
-  --chip:#172031;
-
-  /* Brand gradient */
-  --brand:#66d9e8;
-  --brand-2:#74c0fc;
-
-  /* Status */
-  --ok:#51cf66;
-  --warn:#ffd43b;
-  --bad:#ff6b6b;
-  --link:#a5d8ff;
-
-  /* Effects */
+  --bg:#0b0e13; --muted:#10141c; --card:#0f131a;
+  --text:#e7edf3; --text-dim:#b7c2cf; --border:#212837; --chip:#172031;
+  --brand:#66d9e8; --brand-2:#74c0fc; --ok:#51cf66; --warn:#ffd43b; --bad:#ff6b6b; --link:#a5d8ff;
   --shadow:0 10px 30px rgba(0,0,0,.35);
-
-  /* Layout tweaks */
-  --hero-max:none;          /* remove width cap so hero aligns with grid */
 }
 
 /* ---------- Resets ---------- */
@@ -34,13 +13,9 @@
 html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
-  color:var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
-               "Apple Color Emoji","Segoe UI Emoji";
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
+  background:var(--bg); color:var(--text);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
 img{max-width:100%;height:auto;border:0}
 a{color:var(--link);text-decoration:none}
@@ -52,10 +27,8 @@ a:hover{text-decoration:underline}
 .main{padding:40px 0}
 .section{margin:36px 0}
 .hero{padding:64px 0}
-/* keep hero edges aligned with container */
-.hero h1,.hero p,.hero .cta-row,.hero .hero-badges{max-width:var(--hero-max)}
 
-/* Flex/grid helpers */
+/* Flex/grid */
 .row{display:flex;gap:12px}
 .row.between{justify-content:space-between}
 .row.middle{align-items:center}
@@ -67,72 +40,38 @@ a:hover{text-decoration:underline}
 /* ---------- Header / Nav ---------- */
 .site-header{
   position:sticky;top:0;z-index:10;
-  background:rgba(11,14,19,.9);
-  backdrop-filter:saturate(140%) blur(6px);
+  background:rgba(11,14,19,.9);backdrop-filter:saturate(140%) blur(6px);
   border-bottom:1px solid var(--border);
 }
-.brand{
-  font-weight:800;font-size:18px;letter-spacing:.2px;
-  color:var(--text);display:inline-flex;align-items:center;gap:8px
-}
-.brand-mark{
-  display:inline-grid;place-items:center;
-  width:28px;height:28px;border-radius:8px;
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#00131e;font-weight:900
-}
+.brand{font-weight:800;font-size:18px;letter-spacing:.2px;color:var(--text);display:inline-flex;align-items:center;gap:8px}
+.brand-mark{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#00131e;font-weight:900}
 .nav a{margin-left:14px;color:var(--text)}
 .lang-switch a{color:var(--text-dim)}
 
 /* ---------- Typography ---------- */
 h1,h2,h3{line-height:1.25;margin:0 0 8px}
-h1{font-size:38px}
-h2{font-size:22px}
-h3{font-size:18px}
+h1{font-size:38px} h2{font-size:22px} h3{font-size:18px}
 p{margin:0 0 12px}
 .small{font-size:12px;color:var(--text-dim)}
 .hero p{color:var(--text-dim);font-size:18px}
 
 /* ---------- Cards / Chips / Tags ---------- */
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:18px;
-  box-shadow:var(--shadow)
-}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
 .kpi{display:flex;gap:18px;flex-wrap:wrap}
-.kpi .k{
-  background:transparent;
-  border:1px solid var(--border);
-  padding:12px 14px;border-radius:12px;
-  color:var(--text-dim)
-}
+.kpi .k{background:transparent;border:1px solid var(--border);padding:12px 14px;border-radius:12px;color:var(--text-dim)}
 .k .kv{font-weight:800;font-size:16px}
 .k .kl{color:var(--text-dim);font-size:12px}
 
-.tag{
-  display:inline-block;padding:4px 8px;border-radius:999px;
-  background:var(--chip);border:1px solid var(--border);
-  color:var(--text-dim);font-size:12px;margin-right:6px
-}
+.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:var(--chip);border:1px solid var(--border);color:var(--text-dim);font-size:12px;margin-right:6px}
 .tag.ok{color:var(--ok);border-color:rgba(81,207,102,.3)}
 .tag.warn{color:var(--warn);border-color:rgba(255,212,59,.3)}
 .tag.bad{color:var(--bad);border-color:rgba(255,107,107,.3)}
 .hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 
 /* ---------- Buttons ---------- */
-.btn{
-  display:inline-block;
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#001624;padding:10px 14px;border-radius:12px;
-  font-weight:700;border:1px solid transparent;box-shadow:var(--shadow)
-}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001624;padding:10px 14px;border-radius:12px;font-weight:700;border:1px solid transparent;box-shadow:var(--shadow)}
 .btn:hover{text-decoration:none;opacity:.95}
-.btn-outline{
-  display:inline-block;background:transparent;border:1px solid var(--border);
-  color:var(--text);padding:10px 14px;border-radius:12px
-}
+.btn-outline{display:inline-block;background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:12px}
 .nav .btn,.nav .btn-outline{padding:8px 12px;line-height:1.1}
 
 /* ---------- Tables ---------- */
@@ -143,43 +82,20 @@ p{margin:0 0 12px}
 
 /* ---------- Forms ---------- */
 .form{display:grid;gap:12px;max-width:560px}
-.input, textarea, select{
-  width:100%;padding:12px 14px;border-radius:10px;
-  border:1px solid var(--border);background:var(--muted);color:var(--text)
-}
+.input, textarea, select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:var(--muted);color:var(--text)}
 textarea{min-height:120px;resize:vertical}
 .list-plain{list-style:none;padding:0;margin:0}
 
 /* ---------- Footer ---------- */
-.site-footer .footer-meta{
-  display:flex;justify-content:space-between;gap:8px;
-  border-top:1px solid var(--border);padding-top:16px;margin-top:18px;color:var(--text-dim)
-}
+.site-footer .footer-meta{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--border);padding-top:16px;margin-top:18px;color:var(--text-dim)}
 
-/* ---------- Notices ---------- */
-/* left-aligned compact compliance ribbon so edges line up */
-section.attention{
-  background:transparent;
-  border:0;
-  padding:0;
-  margin:16px 0;
-  text-align:left;
-}
-section.attention>p{
-  display:block;
-  margin:0;
-  padding:10px 12px;
-  border:1px solid var(--border);
-  border-left:4px solid var(--brand-2);
-  border-radius:12px;
-  color:var(--text-dim);
-  box-shadow:none;
-}
+/* ---------- Compliance ribbon (aligned to container left) ---------- */
+/* Markup pattern across pages is: <section class="container section attention"><p>...</p></section> */
+.section.attention{margin:16px 0}
+.section.attention p{display:block;margin:0;padding:10px 12px;border:1px solid var(--border);border-left:4px solid var(--brand-2);border-radius:12px;color:var(--text-dim);background:transparent;box-shadow:none}
 
 /* ---------- RTL helpers ---------- */
-html[dir="rtl"] body{
-  font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma", ui-sans-serif, system-ui
-}
+html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma",ui-sans-serif,system-ui}
 .rtl-center{text-align:center}
 
 /* ---------- Responsive ---------- */
@@ -189,35 +105,4 @@ html[dir="rtl"] body{
 }
 
 /* ---------- Motion pref ---------- */
-@media (prefers-reduced-motion:reduce){
-  *{scroll-behavior:auto}
-}
-/* ---- 60PC alignment hard-fix ---- */
-section.attention{
-  /* kill any legacy styles */
-  all: unset !important;
-  display: block !important;
-  margin: 16px 0 !important;
-}
-section.attention .container,
-section.attention .section{ all: unset !important; } /* safety if nested */
-
-section.attention > p{
-  display: block !important;
-  margin: 0 !important;
-  padding: 10px 12px !important;
-  border: 1px solid var(--border) !important;
-  border-left: 4px solid var(--brand-2) !important;
-  border-radius: 12px !important;
-  color: var(--text-dim) !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* ensure hero uses the same left edge as the grid */
-.hero h1,.hero p,.hero .cta-row,.hero .hero-badges{
-  max-width: none !important;
-}
-
-/* optional: tighten vertical gap above the ribbon */
-section.attention{ margin-top: 12px !important; }
+@media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto} }
