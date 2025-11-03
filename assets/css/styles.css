@@ -4,17 +4,17 @@
 /* ---------- Tokens ---------- */
 :root{
   /* Color system */
-  --bg:#0b0e13;             /* page background */
-  --muted:#10141c;          /* form fields / inputs */
-  --card:#0f131a;           /* cards */
-  --text:#e7edf3;           /* primary text */
-  --text-dim:#b7c2cf;       /* secondary text */
-  --border:#212837;         /* borders */
-  --chip:#172031;           /* subtle chips */
+  --bg:#0b0e13;
+  --muted:#10141c;
+  --card:#0f131a;
+  --text:#e7edf3;
+  --text-dim:#b7c2cf;
+  --border:#212837;
+  --chip:#172031;
 
   /* Brand gradient */
-  --brand:#66d9e8;          /* cyan */
-  --brand-2:#74c0fc;        /* sky blue */
+  --brand:#66d9e8;
+  --brand-2:#74c0fc;
 
   /* Status */
   --ok:#51cf66;
@@ -26,7 +26,7 @@
   --shadow:0 10px 30px rgba(0,0,0,.35);
 
   /* Layout tweaks */
-  --hero-max:980px;         /* max width for hero text blocks */
+  --hero-max:none;          /* remove width cap so hero aligns with grid */
 }
 
 /* ---------- Resets ---------- */
@@ -52,10 +52,8 @@ a:hover{text-decoration:underline}
 .main{padding:40px 0}
 .section{margin:36px 0}
 .hero{padding:64px 0}
-.hero h1,
-.hero p,
-.hero .cta-row,
-.hero .hero-badges{max-width:var(--hero-max)}
+/* keep hero edges aligned with container */
+.hero h1,.hero p,.hero .cta-row,.hero .hero-badges{max-width:var(--hero-max)}
 
 /* Flex/grid helpers */
 .row{display:flex;gap:12px}
@@ -135,7 +133,6 @@ p{margin:0 0 12px}
   display:inline-block;background:transparent;border:1px solid var(--border);
   color:var(--text);padding:10px 14px;border-radius:12px
 }
-/* Slimmer header buttons */
 .nav .btn,.nav .btn-outline{padding:8px 12px;line-height:1.1}
 
 /* ---------- Tables ---------- */
@@ -160,17 +157,17 @@ textarea{min-height:120px;resize:vertical}
 }
 
 /* ---------- Notices ---------- */
-/* Compact compliance ribbon (centered) */
+/* left-aligned compact compliance ribbon so edges line up */
 section.attention{
   background:transparent;
   border:0;
   padding:0;
-  margin:16px auto;
-  text-align:center;
+  margin:16px 0;
+  text-align:left;
 }
 section.attention>p{
-  display:inline-block;
-  margin:0 auto;
+  display:block;
+  margin:0;
   padding:10px 12px;
   border:1px solid var(--border);
   border-left:4px solid var(--brand-2);
