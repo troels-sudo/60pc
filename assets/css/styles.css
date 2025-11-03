@@ -1,23 +1,32 @@
-/* 60 Point Capital – Global Styles
-   Mobile-first. System fonts. Dark UI. RTL-ready.
-   Used by all pages. */
+/* 60 Point Capital — Global Styles
+   Mobile-first. System fonts. Dark UI. RTL-ready. */
 
 /* ---------- Tokens ---------- */
 :root{
-  --bg:#0b0d12;
-  --muted:#11151d;
-  --card:#0f131a;
-  --text:#e8ecf1;
-  --text-dim:#b6c0cd;
-  --brand:#66d9e8;
-  --brand-2:#74c0fc;
+  /* Color system */
+  --bg:#0b0e13;             /* page background */
+  --muted:#10141c;          /* form fields / inputs */
+  --card:#0f131a;           /* cards */
+  --text:#e7edf3;           /* primary text */
+  --text-dim:#b7c2cf;       /* secondary text */
+  --border:#212837;         /* borders */
+  --chip:#172031;           /* subtle chips */
+
+  /* Brand gradient */
+  --brand:#66d9e8;          /* cyan */
+  --brand-2:#74c0fc;        /* sky blue */
+
+  /* Status */
   --ok:#51cf66;
   --warn:#ffd43b;
   --bad:#ff6b6b;
   --link:#a5d8ff;
-  --border:#202736;
-  --chip:#1a2130;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
+
+  /* Effects */
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+
+  /* Layout tweaks */
+  --hero-max:980px;         /* max width for hero text blocks */
 }
 
 /* ---------- Resets ---------- */
@@ -43,6 +52,10 @@ a:hover{text-decoration:underline}
 .main{padding:40px 0}
 .section{margin:36px 0}
 .hero{padding:64px 0}
+.hero h1,
+.hero p,
+.hero .cta-row,
+.hero .hero-badges{max-width:var(--hero-max)}
 
 /* Flex/grid helpers */
 .row{display:flex;gap:12px}
@@ -56,7 +69,7 @@ a:hover{text-decoration:underline}
 /* ---------- Header / Nav ---------- */
 .site-header{
   position:sticky;top:0;z-index:10;
-  background:rgba(11,13,18,.9);
+  background:rgba(11,14,19,.9);
   backdrop-filter:saturate(140%) blur(6px);
   border-bottom:1px solid var(--border);
 }
@@ -68,7 +81,7 @@ a:hover{text-decoration:underline}
   display:inline-grid;place-items:center;
   width:28px;height:28px;border-radius:8px;
   background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#002b36;font-weight:900
+  color:#00131e;font-weight:900
 }
 .nav a{margin-left:14px;color:var(--text)}
 .lang-switch a{color:var(--text-dim)}
@@ -91,9 +104,15 @@ p{margin:0 0 12px}
   box-shadow:var(--shadow)
 }
 .kpi{display:flex;gap:18px;flex-wrap:wrap}
-.kpi .k{background:var(--chip);border:1px solid var(--border);padding:12px 14px;border-radius:12px}
-.k .kv{font-weight:800;font-size:18px}
+.kpi .k{
+  background:transparent;
+  border:1px solid var(--border);
+  padding:12px 14px;border-radius:12px;
+  color:var(--text-dim)
+}
+.k .kv{font-weight:800;font-size:16px}
 .k .kl{color:var(--text-dim);font-size:12px}
+
 .tag{
   display:inline-block;padding:4px 8px;border-radius:999px;
   background:var(--chip);border:1px solid var(--border);
@@ -116,6 +135,8 @@ p{margin:0 0 12px}
   display:inline-block;background:transparent;border:1px solid var(--border);
   color:var(--text);padding:10px 14px;border-radius:12px
 }
+/* Slimmer header buttons */
+.nav .btn,.nav .btn-outline{padding:8px 12px;line-height:1.1}
 
 /* ---------- Tables ---------- */
 .table{width:100%;border-collapse:collapse;font-size:14px}
@@ -139,14 +160,28 @@ textarea{min-height:120px;resize:vertical}
 }
 
 /* ---------- Notices ---------- */
-.attention{
-  background:linear-gradient(180deg, rgba(116,192,252,.12), rgba(102,217,232,.08));
-  border:1px solid var(--border);padding:12px;border-radius:12px
+/* Compact compliance ribbon (centered) */
+section.attention{
+  background:transparent;
+  border:0;
+  padding:0;
+  margin:16px auto;
+  text-align:center;
+}
+section.attention>p{
+  display:inline-block;
+  margin:0 auto;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-left:4px solid var(--brand-2);
+  border-radius:12px;
+  color:var(--text-dim);
+  box-shadow:none;
 }
 
 /* ---------- RTL helpers ---------- */
 html[dir="rtl"] body{
-  font-family: "Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma", ui-sans-serif, system-ui
+  font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma", ui-sans-serif, system-ui
 }
 .rtl-center{text-align:center}
 
@@ -157,35 +192,6 @@ html[dir="rtl"] body{
 }
 
 /* ---------- Motion pref ---------- */
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   *{scroll-behavior:auto}
 }
-/* ---- 60PC polish #1: compliance ribbon + hero width + chips ---- */
-
-/* Limit hero text width so it reads cleaner */
-:root { --hero-max: 980px; }
-.hero h1,
-.hero p,
-.hero .cta-row,
-.hero .hero-badges { max-width: var(--hero-max); }
-
-/* Make the compliance strip subtle, not a big block */
-.attention{
-  background: transparent;
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--brand-2);
-  padding: 12px 14px;
-  border-radius: 12px;
-  box-shadow: none;
-}
-
-/* Tighten the KPI chips so they don't look like big buttons */
-.kpi .k{
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-}
-
-/* Lighter nav button padding so header looks slimmer */
-.nav .btn,
-.nav .btn-outline{ padding: 8px 12px; line-height: 1.1; }
