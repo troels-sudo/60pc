@@ -1,4 +1,4 @@
-/* 60 Point Capital — Global Styles */
+/* 60 Point Capital — Global Styles (clean) */
 
 /* ---------- Tokens ---------- */
 :root{
@@ -43,10 +43,30 @@ a:hover{text-decoration:underline}
   background:rgba(11,14,19,.9);backdrop-filter:saturate(140%) blur(6px);
   border-bottom:1px solid var(--border);
 }
-.brand{font-weight:800;font-size:18px;letter-spacing:.2px;color:var(--text);display:inline-flex;align-items:center;gap:8px}
-.brand-mark{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#00131e;font-weight:900}
-.nav a{margin-left:14px;color:var(--text)}
-.lang-switch a{color:var(--text-dim)}
+.brand{
+  font-weight:800;font-size:18px;letter-spacing:.2px;
+  color:var(--text);display:inline-flex;align-items:center;gap:8px
+}
+/* Final badge styling (replaces earlier 28px variant) */
+.brand-mark{
+  width:30px;height:30px;border-radius:8px;
+  display:grid;place-items:center;
+  font-weight:900;font-size:14px;letter-spacing:0;
+  color:#001015;
+  background:linear-gradient(135deg,var(--brand-2),var(--brand));
+  box-shadow:0 0 0 1px rgba(255,255,255,.06) inset;
+}
+.brand-logo{width:30px;height:30px;border-radius:8px;margin-inline-end:8px}
+
+.nav a{margin-left:14px;color:var(--text);font-weight:500}
+.nav .btn{ color:#000 !important }                 /* Contact text black */
+.nav .btn-outline{ font-weight:500 !important }    /* Hire Us not bold */
+.nav .btn-outline.btn{                              /* neutralize if both classes exist */
+  background:transparent !important;
+  border:1px solid var(--border) !important;
+  color:var(--text) !important;
+  box-shadow:none !important;
+}
 
 /* ---------- Typography ---------- */
 h1,h2,h3{line-height:1.25;margin:0 0 8px}
@@ -72,7 +92,6 @@ p{margin:0 0 12px}
 .btn{display:inline-block;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001624;padding:10px 14px;border-radius:12px;font-weight:700;border:1px solid transparent;box-shadow:var(--shadow)}
 .btn:hover{text-decoration:none;opacity:.95}
 .btn-outline{display:inline-block;background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:12px}
-.nav .btn,.nav .btn-outline{padding:8px 12px;line-height:1.1}
 
 /* ---------- Tables ---------- */
 .table{width:100%;border-collapse:collapse;font-size:14px}
@@ -87,12 +106,23 @@ textarea{min-height:120px;resize:vertical}
 .list-plain{list-style:none;padding:0;margin:0}
 
 /* ---------- Footer ---------- */
-.site-footer .footer-meta{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--border);padding-top:16px;margin-top:18px;color:var(--text-dim)}
+.site-footer .footer-meta{
+  display:flex;justify-content:space-between;gap:8px;
+  border-top:1px solid var(--border);padding-top:16px;margin-top:18px;color:var(--text-dim)
+}
 
-/* ---------- Compliance ribbon (aligned to container left) ---------- */
-/* Markup pattern across pages is: <section class="container section attention"><p>...</p></section> */
-.section.attention{margin:16px 0}
-.section.attention p{display:block;margin:0;padding:10px 12px;border:1px solid var(--border);border-left:4px solid var(--brand-2);border-radius:12px;color:var(--text-dim);background:transparent;box-shadow:none}
+/* ---------- Compliance ribbon (compact, aligned) ---------- */
+/* Works with existing markup: <section class="container section attention"><p>...</p></section> */
+.container.section.attention{
+  margin:16px 0; padding:0; background:transparent; border:0; text-align:left;
+}
+.container.section.attention > p{
+  display:inline-flex; align-items:center; gap:.5ch;
+  margin:0; padding:10px 12px;
+  border:1px solid var(--border); border-left:4px solid var(--brand-2);
+  border-radius:12px; color:var(--text-dim); background:transparent; box-shadow:none;
+  width:auto; max-width:100%;
+}
 
 /* ---------- RTL helpers ---------- */
 html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma",ui-sans-serif,system-ui}
@@ -106,74 +136,3 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 
 /* ---------- Motion pref ---------- */
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto} }
-
-/* collision-proof compliance ribbon */
-.compliance{
-  display:block;
-  margin:0;
-  padding:10px 12px;
-  border:1px solid var(--border);
-  border-left:4px solid var(--brand-2);
-  border-radius:12px;
-  color:var(--text-dim);
-  background:transparent;
-  box-shadow:none;
-}
-/* optional: if .attention still appears anywhere, neutralize it */
-.attention{background:transparent!important;border:0!important;padding:0!important;margin:16px 0!important;}
-
-/* Final alignment override for existing markup */
-.container.section.attention{
-  margin:16px 0 !important;
-  padding:0 !important;
-  background:transparent !important;
-  border:0 !important;
-}
-.container.section.attention > p{
-  display:block !important;
-  margin:0 !important;
-  padding:10px 12px !important;
-  border:1px solid var(--border) !important;
-  border-left:4px solid var(--brand-2) !important;
-  border-radius:12px !important;
-  color:var(--text-dim) !important;
-  background:transparent !important;
-  box-shadow:none !important;
-}
-/* ---- Header CTAs + logo + ribbon fixes ---- */
-
-/* Make compliance ribbon shrink to content and align left */
-.section.attention{ margin:16px 0; padding:0; background:transparent; border:0; text-align:left }
-.section.attention > p{
-  display:inline-flex; align-items:center; gap:.5ch;
-  width:auto; max-width:100%;
-  margin:0; padding:10px 12px;
-  border:1px solid var(--border); border-left:4px solid var(--brand-2);
-  border-radius:12px; background:transparent; color:var(--text-dim); box-shadow:none
-}
-
-/* Header buttons */
-.nav a{ font-weight:500 }                 /* regular weight for all nav links */
-.nav .btn-outline{ font-weight:500 }      /* “Hire Us” not bold */
-.nav .btn{ color:#000 !important }        /* “Contact” text black */
-
-/* If HTML still has class="btn btn-outline" on Hire Us, neutralize gradient */
-.nav .btn-outline.btn{
-  background:transparent !important;
-  border:1px solid var(--border) !important;
-  color:var(--text) !important;
-}
-
-/* Logo badge tune for cleaner “60” */
-.brand-mark{
-  width:30px; height:30px; border-radius:8px;
-  display:grid; place-items:center;
-  font-weight:900; font-size:14px; letter-spacing:0;
-  color:#001015;
-  background:linear-gradient(135deg,var(--brand-2),var(--brand));
-  box-shadow:0 0 0 1px rgba(255,255,255,.06) inset;
-}
-.brand-logo{
-  width:30px;height:30px;border-radius:8px;
-  margin-inline-end:8px; /* works in LTR and RTL */
-}
