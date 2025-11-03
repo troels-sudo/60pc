@@ -1,4 +1,4 @@
-/* 60 Point Capital — Global Styles (clean) */
+/* 60 Point Capital — Global Styles (v5, clean) */
 
 /* ---------- Tokens ---------- */
 :root{
@@ -47,7 +47,7 @@ a:hover{text-decoration:underline}
   font-weight:800;font-size:18px;letter-spacing:.2px;
   color:var(--text);display:inline-flex;align-items:center;gap:8px
 }
-/* Final badge styling (replaces earlier 28px variant) */
+/* Logo badge (works whether using <span class="brand-mark">60</span> or <img class="brand-logo">) */
 .brand-mark{
   width:30px;height:30px;border-radius:8px;
   display:grid;place-items:center;
@@ -61,7 +61,7 @@ a:hover{text-decoration:underline}
 .nav a{margin-left:14px;color:var(--text);font-weight:500}
 .nav .btn{ color:#000 !important }                 /* Contact text black */
 .nav .btn-outline{ font-weight:500 !important }    /* Hire Us not bold */
-.nav .btn-outline.btn{                              /* neutralize if both classes exist */
+.nav .btn-outline.btn{                              /* if both classes exist */
   background:transparent !important;
   border:1px solid var(--border) !important;
   color:var(--text) !important;
