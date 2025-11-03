@@ -160,3 +160,32 @@ html[dir="rtl"] body{
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto}
 }
+/* ---- 60PC polish #1: compliance ribbon + hero width + chips ---- */
+
+/* Limit hero text width so it reads cleaner */
+:root { --hero-max: 980px; }
+.hero h1,
+.hero p,
+.hero .cta-row,
+.hero .hero-badges { max-width: var(--hero-max); }
+
+/* Make the compliance strip subtle, not a big block */
+.attention{
+  background: transparent;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--brand-2);
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+/* Tighten the KPI chips so they don't look like big buttons */
+.kpi .k{
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+/* Lighter nav button padding so header looks slimmer */
+.nav .btn,
+.nav .btn-outline{ padding: 8px 12px; line-height: 1.1; }
