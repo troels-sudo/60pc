@@ -121,3 +121,22 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 }
 /* optional: if .attention still appears anywhere, neutralize it */
 .attention{background:transparent!important;border:0!important;padding:0!important;margin:16px 0!important;}
+
+/* Final alignment override for existing markup */
+.container.section.attention{
+  margin:16px 0 !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+}
+.container.section.attention > p{
+  display:block !important;
+  margin:0 !important;
+  padding:10px 12px !important;
+  border:1px solid var(--border) !important;
+  border-left:4px solid var(--brand-2) !important;
+  border-radius:12px !important;
+  color:var(--text-dim) !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
