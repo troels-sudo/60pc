@@ -173,3 +173,7 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
   background:linear-gradient(135deg,var(--brand-2),var(--brand));
   box-shadow:0 0 0 1px rgba(255,255,255,.06) inset;
 }
+.brand-logo{
+  width:30px;height:30px;border-radius:8px;
+  margin-inline-end:8px; /* works in LTR and RTL */
+}
