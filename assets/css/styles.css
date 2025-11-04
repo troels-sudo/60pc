@@ -147,3 +147,11 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 
 /* ---------- Motion pref ---------- */
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto} }
+
+/* debug */
+html::after{
+  content:"css-ok-60pc";
+  position:fixed; right:10px; bottom:8px;
+  font:12px/1 ui-sans-serif; opacity:.5; pointer-events:none;
+}
+
