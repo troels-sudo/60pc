@@ -23,10 +23,22 @@ a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
 
 /* ---------- Layout ---------- */
-.container{max-width:1120px;margin:0 auto;padding:0 20px} /* Increased from 16px to 20px */
+.container{max-width:1120px;margin:0 auto;padding:0 20px; width:100%; box-sizing:border-box;}
 .main{padding:40px 0}
 .section{margin:36px 0}
 .hero{padding:64px 0}
+/* CRITICAL FIX: When hero and container are on same element */
+.hero.container{
+  max-width:1120px;
+  margin:0 auto;
+  padding:64px 20px;
+}
+/* CRITICAL FIX: When section and container are on same element */
+.section.container{
+  max-width:1120px;
+  margin:36px auto;
+  padding:0 20px;
+}
 
 /* Flex/grid */
 .row{display:flex;gap:12px}
@@ -170,10 +182,26 @@ textarea{min-height:120px;resize:vertical}
 
 /* ---------- Compliance ribbon (compact, aligned) ---------- */
 /* Works with: <section class="container section attention"><p>...</p></section> */
-.container.section.attention{
-  margin:16px 0; padding:0; background:transparent; border:0; text-align:left;
+.attention{
+  margin:16px auto; 
+  padding:0 20px; 
+  background:transparent; 
+  border:0; 
+  text-align:left;
+  max-width:1120px;
+  width:100%;
+  box-sizing:border-box;
 }
-.container.section.attention > p{
+.container.section.attention{
+  margin:16px auto; 
+  padding:0 20px; 
+  background:transparent; 
+  border:0; 
+  text-align:left;
+  max-width:1120px;
+}
+.container.section.attention > p,
+.attention > p{
   display:inline-flex; align-items:center; gap:.5ch;
   margin:0; padding:10px 12px;
   border:1px solid var(--border); border-left:4px solid var(--brand-2);
