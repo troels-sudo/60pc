@@ -1,0 +1,2 @@
+/* shim: route any legacy /styles.css reference to the real stylesheet */
+@import url("/assets/css/styles.css");
