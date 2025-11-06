@@ -1,4 +1,4 @@
-/* 60 Point Capital — Global Styles (clean) */
+/* 60 Point Capital — Global Styles (clean + ALIGNMENT FIXES) */
 
 /* ---------- Tokens ---------- */
 :root{
@@ -23,7 +23,7 @@ a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
 
 /* ---------- Layout ---------- */
-.container{max-width:1120px;margin:0 auto;padding:0 16px}
+.container{max-width:1120px;margin:0 auto;padding:0 20px} /* Increased from 16px to 20px */
 .main{padding:40px 0}
 .section{margin:36px 0}
 .hero{padding:64px 0}
@@ -38,15 +38,19 @@ a:hover{text-decoration:underline}
 .grid.g-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
 
 /* ---------- Header / Nav ---------- */
+/* FIX #1: Added vertical padding */
 .site-header{
   position:sticky;top:0;z-index:10;
   background:rgba(11,14,19,.9);backdrop-filter:saturate(140%) blur(6px);
   border-bottom:1px solid var(--border);
+  padding: 16px 0; /* ADDED */
 }
+
 .brand{
   font-weight:800;font-size:18px;letter-spacing:.2px;
   color:var(--text);display:inline-flex;align-items:center;gap:8px
 }
+
 /* Badge (works for <span class="brand-mark">60</span> or <img class="brand-logo">) */
 .brand-mark{
   width:30px;height:30px;border-radius:8px;
@@ -56,10 +60,24 @@ a:hover{text-decoration:underline}
   background:linear-gradient(135deg,var(--brand-2),var(--brand));
   box-shadow:0 0 0 1px rgba(255,255,255,.06) inset;
 }
-.brand-logo{width:30px;height:30px;border-radius:8px;margin-inline-end:8px}
+.brand-logo{width:30px;height:30px;border-radius:8px;}
 
-/* Nav link weights and header buttons */
-.nav a{margin-left:14px;color:var(--text);font-weight:500}
+/* FIX #2: Nav flex alignment */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* ADDED - replaces margin-left */
+}
+
+/* FIX #3: Better link alignment */
+.nav a{
+  color:var(--text);font-weight:500;
+}
+
+.nav a:not(.btn):not(.btn-outline) {
+  padding: 8px 4px; /* ADDED - aligns with button height */
+}
+
 .nav .btn{ color:#000 !important }                 /* Contact text black */
 .nav .btn-outline{ font-weight:500 !important }    /* Hire Us not bold */
 .nav .btn-outline.btn{                              /* if both classes exist */
@@ -67,6 +85,21 @@ a:hover{text-decoration:underline}
   border:1px solid var(--border) !important;
   color:var(--text) !important;
   box-shadow:none !important;
+}
+
+/* FIX #4: Language switcher styling */
+.lang-switch {
+  margin-left: 4px;
+  padding-left: 18px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch a {
+  color: var(--text-dim);
+  font-size: 14px;
+  padding: 8px 4px;
 }
 
 /* ---------- Typography ---------- */
@@ -101,6 +134,15 @@ p{margin:0 0 12px}
 .btn:hover{text-decoration:none;opacity:.95}
 .btn-outline{display:inline-block;background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:12px}
 
+/* ---------- CTA Row alignment ---------- */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 24px;
+}
+
 /* ---------- Tables ---------- */
 .table{width:100%;border-collapse:collapse;font-size:14px}
 .table th,.table td{padding:12px;border-bottom:1px solid var(--border);vertical-align:top}
@@ -117,6 +159,10 @@ textarea{min-height:120px;resize:vertical}
 .list-plain{list-style:none;padding:0;margin:0}
 
 /* ---------- Footer ---------- */
+.site-footer {
+  padding: 40px 0 24px;
+}
+
 .site-footer .footer-meta{
   display:flex;justify-content:space-between;gap:8px;
   border-top:1px solid var(--border);padding-top:16px;margin-top:18px;color:var(--text-dim)
@@ -140,9 +186,25 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 .rtl-center{text-align:center}
 
 /* ---------- Responsive ---------- */
+/* FIX #5: Better mobile padding */
 @media (max-width:720px){
-  .nav a{margin-left:10px}
+  .container {
+    padding: 0 24px; /* Increased from 16px */
+  }
+  
+  .nav {
+    gap: 10px; /* Tighter on mobile */
+  }
+  
+  .nav a:not(.btn):not(.btn-outline) {
+    padding: 8px 2px; /* Reduce horizontal padding on mobile */
+  }
+  
   .hero h1{font-size:28px}
+  
+  .cta-row {
+    gap: 10px;
+  }
 }
 
 /* ---------- Motion pref ---------- */
@@ -150,7 +212,7 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 
 /* debug */
 html::after{
-  content:"css-ok-60pc";
+  content:"css-fixed-alignment";
   position:fixed; right:10px; bottom:8px;
   font:12px/1 ui-sans-serif; opacity:.5; pointer-events:none;
 }
