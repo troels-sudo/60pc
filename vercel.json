@@ -18,9 +18,11 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/styles.css", "destination": "/assets/css/styles.css", "permanent": false },
+    { "source": "/favicon.ico", "destination": "/assets/img/favicon.ico", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/assets/css/styles.css",  "destination": "/assets/css/styles.clean.css" },
-    { "source": "/assets/css/styles.v5.css", "destination": "/assets/css/styles.clean.css" },
-    { "source": "/assets/css/styles.v6.css", "destination": "/assets/css/styles.clean.css" }
+    { "source": "/private/(.*)", "destination": "/private/$1" }
   ]
 }
