@@ -238,4 +238,8 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 /* ---------- Motion pref ---------- */
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto} }
 
+/* Home hero spacing */
+.home-hero h1{ margin-bottom: clamp(20px, 2.6vw, 32px); }
+.home-hero p{ margin-top: 0; }
+
 
