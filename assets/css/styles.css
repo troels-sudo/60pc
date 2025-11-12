@@ -243,3 +243,7 @@ html[dir="rtl"] body{font-family:"Noto Naskh Arabic","Amiri","Geeza Pro","Tahoma
 .home-hero p{ margin-top: 0; }
 
 
+/* --- Typography line-height tighten (sitewide) --- */
+body{ line-height:1.25; }                /* was ~1.6 */
+p, .small, li{ line-height:1.25; }       /* paragraphs, small text, lists */
+h1,h2,h3{ line-height:1.15; }            /* headings */
