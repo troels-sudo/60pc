@@ -1,132 +1,345 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Trusted advisors and strategic thought partners to family offices and private clients—combining investment governance with hands-on corporate finance execution." />
-  <meta name="robots" content="index,follow" />
-  <title>We are your trusted advisors and strategic thought partners • 60 Point Capital</title>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" href="/assets/img/favicon.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="60 Point Capital delivers research-driven, outcome-focused strategies tailored to Pathstone clients across individuals, family offices, and institutions.">
+  <meta name="robots" content="index,follow">
+  <title>60 Point Capital • Research-driven, outcome-focused</title>
+  <link rel="icon" href="/assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: only light;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      line-height: 1.25;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #10121f;
+    }
+    body {
+      margin: 0;
+      color: #eef0f6;
+      background-color: #10121f;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 4px;
+    }
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    .rail {
+      width: 288px;
+      flex-shrink: 0;
+      background: linear-gradient(180deg, #E74A45 0%, #C83F3A 100%);
+      color: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      padding: 48px 32px;
+      display: flex;
+    }
+    .rail-inner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 32px;
+    }
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    .primary-nav {
+      flex-grow: 1;
+    }
+    .primary-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .primary-nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .primary-nav a::before {
+      content: "+";
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .primary-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.18);
+      transform: translateX(4px);
+    }
+    .cta-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.95rem 1.75rem;
+      border-radius: 999px;
+      background-color: #ffffff;
+      color: #C83F3A;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+    }
+    .rail-note {
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    main.hero {
+      margin-left: 288px;
+      min-height: 100vh;
+      width: calc(100% - 288px);
+      position: relative;
+      background: linear-gradient(90deg, rgba(12, 14, 22, 0.92) 0%, rgba(12, 14, 22, 0.78) 35%, rgba(12, 14, 22, 0.45) 65%, rgba(12, 14, 22, 0.15) 100%), url('/images/hero-skyscraper.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 120px 120px 160px;
+      overflow: hidden;
+    }
+    .hero-content {
+      max-width: 640px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 1.25rem;
+    }
+    .hero-content h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.75rem, 3.6vw, 4rem);
+      line-height: 1.1;
+    }
+    .hero-content p {
+      margin: 0;
+      font-size: 1.15rem;
+      max-width: 520px;
+      color: rgba(238, 240, 246, 0.9);
+    }
+    .hero-segments {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+    .hero-segments span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-segments span::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: rgba(238, 240, 246, 0.65);
+    }
+    .capabilities-card {
+      position: absolute;
+      left: 120px;
+      bottom: 64px;
+      background: #E74A45;
+      color: #ffffff;
+      padding: 28px 32px;
+      border-radius: 20px;
+      max-width: 340px;
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.28);
+      display: grid;
+      gap: 1rem;
+      z-index: 1;
+    }
+    .capabilities-card h2 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .capabilities-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      font-size: 0.95rem;
+    }
+    .capabilities-card li::before {
+      content: "•";
+      margin-right: 0.65rem;
+      opacity: 0.7;
+    }
+    .card-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-link::before {
+      content: "+";
+      font-weight: 900;
+    }
+    @media (max-width: 1280px) {
+      main.hero {
+        padding: 100px 80px 140px;
+      }
+      .capabilities-card {
+        left: 80px;
+      }
+    }
+    @media (max-width: 1040px) {
+      .layout {
+        flex-direction: column;
+      }
+      .rail {
+        position: relative;
+        width: 100%;
+        padding: 32px 24px;
+      }
+      main.hero {
+        margin-left: 0;
+        width: 100%;
+        min-height: 80vh;
+        padding: 88px 32px 120px;
+      }
+      .capabilities-card {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 40px;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 720px) {
+      .rail-inner {
+        gap: 24px;
+      }
+      .primary-nav a {
+        font-size: 0.85rem;
+        padding: 0.75rem 0.9rem;
+      }
+      .cta-button {
+        width: 100%;
+      }
+      main.hero {
+        padding: 72px 20px 96px;
+      }
+      .hero-content h1 {
+        font-size: clamp(2.2rem, 7vw, 3.25rem);
+      }
+      .hero-content p {
+        font-size: 1.05rem;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container row between middle">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo-60.svg" alt="60">60 Point Capital</a>
-    <nav class="nav">
-      <a href="/ocio.html">OCIO</a>
-      <a href="/mandates.html">Mandates</a>
-      <a href="/process.html">Process</a>
-      <a href="/team.html">Team</a>
-      <a href="/partners.html">Partners</a>
-      <a href="/insights.html">Insights</a>
-      <a href="/private-access.html">Private Access</a>
-      <a href="/hire-us.html" class="btn-outline">Hire Us</a>
-      <a href="/contact.html" class="btn">Contact</a>
-      <span class="lang-switch"><a href="/ar/index.html" aria-label="Arabic">العربية</a></span>
-    </nav>
-  </div>
-</header>
-
-<main class="main">
-  <!-- HERO -->
-  <!-- HERO -->
-<section class="hero container home-hero">
-  <h1>We are your trusted advisors and strategic thought partners</h1>
-  <p>Built for family offices and the executives who run them, we combine investment governance with hands-on corporate finance execution to help you grow, protect, and institutionalize your capital.</p>
-  <div class="cta-row">
-    <a class="btn" href="/hire-us.html#request-ocio">Request OCIO Proposal</a>
-    <a class="btn-outline" href="/contact.html#intro-call">Book Introduction Call</a>
-    <a class="btn-outline" href="/private-access.html">Request Private Room Access</a>
-  </div>
-  <div class="hero-badges">
-    <span class="tag">OCIO</span>
-    <span class="tag">Corporate Finance</span>
-    <span class="tag">Private Credit</span>
-    <span class="tag">Secondaries</span>
-    <span class="tag">Co-investments</span>
-  </div>
-</section>
-
-
-  <!-- KPIs -->
-  <section class="container section">
-    <div class="kpi">
-      <div class="k"><div class="kv">Operator-led</div><div class="kl">CIO, CFO, COO experience</div></div>
-      <div class="k"><div class="kv">Mandates</div><div class="kl">OCIO, sleeves, advisory, interim CXO</div></div>
-      <div class="k"><div class="kv">Coverage</div><div class="kl">EMEA focus with global access</div></div>
-    </div>
-  </section>
-
-  <!-- THREE FEATURE CARDS -->
-  <section class="container section">
-    <div class="grid g-3">
-      <article class="card">
-        <h3>OCIO</h3>
-        <p>Research-driven portfolio design and implementation. We align asset allocation, manager selection, co-investments, and risk oversight with your governance goals—then report with clarity and cadence.</p>
-        <a href="/ocio.html" class="btn-outline">Explore OCIO</a>
-      </article>
-      <article class="card">
-        <h3>Corporate Finance</h3>
-        <p>Practical, independent advice across the deal continuum—from strategy and target evaluation to execution and exit. Hands-on support for capital raising, debt advisory, M&amp;A, and transaction services.</p>
-        <a href="/mandates.html" class="btn-outline">View Mandates</a>
-      </article>
-      <article class="card">
-        <h3>Interim / Fractional CXO</h3>
-        <p>Top-tier interim finance leadership to build momentum and deliver results: cash control, reporting, modeling, investor readiness, and board cadence. We bring strategy and alignment, then drive execution.</p>
-        <a href="/hire-us.html" class="btn-outline">Hire Us</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- WHY WORK WITH US -->
-  <section class="container section">
-    <div class="card">
-      <h3>Why work with us</h3>
-      <p>Built for family offices—and the operators who support them. We help you scale through process, technology, and specialist talent, so you can focus on what matters while we deliver the infrastructure and execution to match.</p>
-    </div>
-  </section>
-
-  <!-- COMPLIANCE -->
-  <section class="container section attention">
-    <p class="small">Professional clients only. Not investment advice. See <a href="/disclaimer.html">disclaimer</a>.</p>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="grid g-3">
-      <section>
-        <h4>Disclaimers</h4>
-        <p class="small">
-          For professional clients and eligible counterparties only. Information on this site is for discussion
-          and informational purposes and does not constitute investment advice or an offer to buy or sell any security.
-          Investments involve risk. Past performance is not indicative of future results. Availability is subject
-          to legal and regulatory restrictions. By using this site you confirm that you are a professional client
-          as defined by your local regulator.
-        </p>
-      </section>
-      <section>
-        <h4>Legal</h4>
-        <ul class="list-plain small">
-          <li><a href="/disclaimer.html">Disclaimer</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
+  <div class="layout">
+    <aside class="rail" aria-label="Primary site navigation and call to action">
+      <div class="rail-inner">
+        <a class="brand" href="/" aria-label="60 Point Capital home">
+          60 Point Capital
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation links">
+          <ul>
+            <li><a href="/process.html">Learn About Us</a></li>
+            <li><a href="/insights.html">Read Insights</a></li>
+            <li><a href="/team.html">Meet Our People</a></li>
+            <li><a href="/contact.html#offices">Locate an Office</a></li>
+            <li><a href="/insights.html#events">Attend an Event</a></li>
+            <li><a href="/private-access.html">Access Client Portal</a></li>
+          </ul>
+        </nav>
+        <a class="cta-button" href="/contact.html">Start a Conversation</a>
+        <p class="rail-note">Pathstone partnership • Global perspective</p>
+      </div>
+    </aside>
+    <main class="hero" aria-labelledby="landing-headline">
+      <div class="hero-content">
+        <h1 id="landing-headline">Research-driven.<br>Outcome-focused.<br>Invested in your success.</h1>
+        <p>Pathstone clients trust 60 Point Capital to align complex wealth with clear strategy. We translate research into decisive action, integrate institutional discipline, and steward every relationship with measurable outcomes.</p>
+        <div class="hero-segments" aria-label="Client segments served">
+          <span>Individuals</span>
+          <span>Family Offices</span>
+          <span>Institutions</span>
+        </div>
+      </div>
+      <section class="capabilities-card" aria-labelledby="capabilities-title">
+        <h2 id="capabilities-title">Capabilities</h2>
+        <ul>
+          <li>Vision &amp; values discovery</li>
+          <li>Strategic financial planning &amp; modeling</li>
+          <li>Investment strategy &amp; management</li>
+          <li>Portfolio management &amp; asset allocation</li>
+          <li>Liquidity &amp; cash-flow planning</li>
+          <li>Insurance, risk, cybersecurity</li>
         </ul>
+        <a class="card-link" href="/mandates.html">View more</a>
       </section>
-      <section>
-        <h4>Contact</h4>
-        <ul class="list-plain small">
-          <li><a href="/contact.html">Contact form</a></li>
-          <li><a href="/hire-us.html">RFP / Hire Us</a></li>
-        </ul>
-      </section>
-    </div>
-    <div class="footer-meta small">
-      <span>© 60 Point Capital. All rights reserved.</span>
-      <span>Dubai, UAE</span>
-    </div>
+    </main>
   </div>
-</footer>
 </body>
 </html>
