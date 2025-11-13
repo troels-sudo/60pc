@@ -3,422 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Trusted advisors and strategic thought partners to family offices and private clients—combining investment governance with hands-on corporate finance execution." />
-  <meta name="robots" content="index,follow" />
-  <title>We are your trusted advisors and strategic thought partners • 60 Point Capital</title>
+  <title>60 Point Capital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" href="/assets/img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* Pathstone-style Landing Page Styles */
-    * {
-      box-sizing: border-box;
-    }
-    
-    html, body {
-      margin: 0;
-      padding: 0;
-      line-height: 1.25;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.25;
-      margin: 0;
-    }
-    
-    /* Left Rail */
-    .left-rail {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 320px;
-      background: linear-gradient(180deg, #ff6b6b 0%, #ff8e8e 50%, #ffa8a8 100%);
-      padding: 48px 32px;
-      display: flex;
-      flex-direction: column;
-      z-index: 100;
-      overflow-y: auto;
-    }
-    
-    .rail-brand {
-      margin-bottom: 48px;
-    }
-    
-    .rail-brand a {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: 0.2px;
-    }
-    
-    .rail-brand img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-    }
-    
-    .rail-nav {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    .rail-nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 16px;
-      padding: 12px 16px;
-      border-radius: 8px;
-      transition: background-color 0.2s;
-    }
-    
-    .rail-nav a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      text-decoration: none;
-    }
-    
-    .rail-cta {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    
-    .rail-cta .btn {
-      display: block;
-      text-align: center;
-      padding: 14px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    
-    .rail-cta .btn-primary {
-      background: #fff;
-      color: #ff6b6b;
-      border: 2px solid #fff;
-    }
-    
-    .rail-cta .btn-primary:hover {
-      background: rgba(255, 255, 255, 0.9);
-      text-decoration: none;
-    }
-    
-    .rail-cta .btn-outline {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-    }
-    
-    .rail-cta .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.15);
-      text-decoration: none;
-    }
-    
-    .rail-lang {
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    .rail-lang a {
-      color: rgba(255, 255, 255, 0.9);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    
-    .rail-lang a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Main Content */
-    .main-content {
-      margin-left: 320px;
-      min-height: 100vh;
-      position: relative;
-    }
-    
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-    
-    .hero-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(11, 14, 19, 0.7) 0%, rgba(11, 14, 19, 0.85) 100%);
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 80px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .hero-text {
-      color: #e7edf3;
-      text-align: center;
-    }
-    
-    .hero-text h1 {
-      font-size: 64px;
-      font-weight: 800;
-      margin-bottom: 24px;
-      line-height: 1.25;
-      color: #fff;
-    }
-    
-    .hero-text p {
-      font-size: 20px;
-      line-height: 1.5;
-      color: #b7c2cf;
-      max-width: 700px;
-      margin: 0 auto 32px;
-    }
-    
-    /* Capabilities Card */
-    .capabilities-card {
-      position: fixed;
-      bottom: 32px;
-      left: 352px;
-      width: 360px;
-      background: rgba(15, 19, 26, 0.95);
-      backdrop-filter: saturate(140%) blur(12px);
-      border: 1px solid rgba(33, 40, 55, 0.8);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-      z-index: 50;
-    }
-    
-    .capabilities-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #e7edf3;
-      margin-bottom: 16px;
-    }
-    
-    .capabilities-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    
-    .capabilities-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    
-    .capabilities-list li::before {
-      content: '→';
-      color: #66d9e8;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-    
-    .capabilities-list a {
-      color: #e7edf3;
-      text-decoration: none;
-      font-size: 15px;
-      line-height: 1.4;
-      transition: color 0.2s;
-    }
-    
-    .capabilities-list a:hover {
-      color: #66d9e8;
-      text-decoration: none;
-    }
-    
-    .capabilities-list .capability-desc {
-      color: #b7c2cf;
-      font-size: 13px;
-      margin-top: 4px;
-      line-height: 1.4;
-    }
-    
-    /* Responsive */
-    @media (max-width: 1040px) {
-      .left-rail {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 24px 20px;
-      }
-      
-      .rail-nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      
-      .rail-nav a {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-      
-      .rail-cta {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      
-      .rail-cta .btn {
-        flex: 1;
-        min-width: 120px;
-      }
-      
-      .main-content {
-        margin-left: 0;
-      }
-      
-      .hero-content {
-        padding: 0 40px;
-      }
-      
-      .hero-text h1 {
-        font-size: 42px;
-      }
-      
-      .hero-text p {
-        font-size: 18px;
-      }
-      
-      .capabilities-card {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        width: 100%;
-        margin: 32px 20px;
-        max-width: calc(100% - 40px);
-      }
-    }
-    
-    @media (max-width: 640px) {
-      .hero-text h1 {
-        font-size: 32px;
-      }
-      
-      .hero-text p {
-        font-size: 16px;
-      }
-      
-      .hero-content {
-        padding: 0 24px;
-      }
-      
-      .capabilities-card {
-        margin: 24px 16px;
-        max-width: calc(100% - 32px);
-        padding: 20px;
-      }
-    }
+  :root {
+    --brand-red: #E74A45;
+    --brand-red-dark: #C83F3A;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, sans-serif; line-height: 1.25; }
+  .layout { display: flex; min-height: 100vh; }
+  aside { width: 280px; background: linear-gradient(180deg, var(--brand-red), var(--brand-red-dark)); color: #fff; padding: 20px; flex-shrink: 0; }
+  .logo { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; margin-bottom: 20px; }
+  nav a { display: block; padding: 10px 0; color: #fff; text-decoration: none; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.3); }
+  nav a:first-child { border-top: 0; }
+  nav .cta { margin-top: 10px; padding: 10px 0; background: #fff; color: var(--brand-red); border-radius: 8px; text-align: center; font-weight: 800; text-decoration: none; }
+  main { flex-grow: 1; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url('assets/img/hero-skyscraper.jpg') center/cover no-repeat; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1)); }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 80px 40px; color: #fff; }
+  .hero-content h1 { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 48px; margin: 0 0 20px; line-height: 1.1; }
+  .hero-content p { font-size: 18px; max-width: 600px; }
+  .capabilities { position: absolute; bottom: 20px; left: 20px; background: var(--brand-red); padding: 15px; border-radius: 12px; max-width: 260px; }
+  .capabilities h3 { margin: 0 0 10px; font-family: Montserrat; font-weight: 900; font-size: 18px; }
+  .capabilities ul { list-style: none; margin: 0; padding: 0; font-size: 14px; }
+  .capabilities li { border-top: 1px solid rgba(255,255,255,0.3); padding: 6px 0; }
+  @media (max-width: 900px) {
+    aside { width: 100%; }
+    .layout { flex-direction: column; }
+    .hero-content { padding: 40px 20px; }
+  }
   </style>
 </head>
 <body>
-  <!-- Left Rail -->
-  <aside class="left-rail">
-    <div class="rail-brand">
-      <a href="/">
-        <img src="/assets/img/logo-60.svg" alt="60">
-        60 Point Capital
-      </a>
-    </div>
-    <nav class="rail-nav">
-      <a href="/ocio.html">OCIO</a>
-      <a href="/mandates.html">Mandates</a>
-      <a href="/process.html">Process</a>
-      <a href="/team.html">Team</a>
-      <a href="/partners.html">Partners</a>
-      <a href="/insights.html">Insights</a>
-      <a href="/private-access.html">Private Access</a>
-    </nav>
-    <div class="rail-cta">
-      <a href="/hire-us.html" class="btn btn-outline">Hire Us</a>
-      <a href="/contact.html" class="btn btn-primary">Contact</a>
-    </div>
-    <div class="rail-lang">
-      <a href="/ar/index.html" aria-label="Arabic">العربية</a>
-    </div>
-  </aside>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <img src="/assets/img/hero-skyscraper.jpg" alt="Hero" class="hero-image">
+  <div class="layout">
+    <aside>
+      <div class="logo">60 Point Capital</div>
+      <nav>
+        <a href="#">+ LEARN ABOUT US</a>
+        <a href="#">+ READ INSIGHTS</a>
+        <a href="#">+ MEET OUR PEOPLE</a>
+        <a href="#">+ ATTEND AN EVENT</a>
+        <a href="#">+ ACCESS CLIENT PORTAL</a>
+        <a class="cta" href="#">START A CONVERSATION</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-text">
-          <h1>We are your trusted advisors and strategic thought partners</h1>
-          <p>Built for family offices and the executives who run them, we combine investment governance with hands-on corporate finance execution to help you grow, protect, and institutionalize your capital.</p>
-        </div>
+        <div>WHAT WE DO</div>
+        <h1>Research-driven.<br>Outcome-focused.<br>Invested in your success.</h1>
+        <p>We partner with foundations, endowments, family offices and private clients to deliver disciplined investment advisory services, customized portfolio construction, deep research and risk management.</p>
       </div>
-    </section>
-  </main>
-
-  <!-- Capabilities Card -->
-  <div class="capabilities-card">
-    <h3>Capabilities</h3>
-    <ul class="capabilities-list">
-      <li>
-        <div>
-          <a href="/ocio.html">OCIO</a>
-          <div class="capability-desc">Research-driven portfolio design and implementation</div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a href="/mandates.html">Corporate Finance</a>
-          <div class="capability-desc">Independent advice across the deal continuum</div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a href="/hire-us.html">Interim / Fractional CXO</a>
-          <div class="capability-desc">Top-tier interim finance leadership</div>
-        </div>
-      </li>
-    </ul>
+      <div class="capabilities">
+        <h3>Our Capabilities</h3>
+        <ul>
+          <li>Vision & values discovery</li>
+          <li>Strategic financial planning & modeling</li>
+          <li>Investment strategy & management</li>
+          <li>Portfolio management & asset allocation</li>
+          <li>Liquidity & cash-flow planning</li>
+          <li>Insurance, risk & cybersecurity</li>
+        </ul>
+      </div>
+    </main>
   </div>
 </body>
 </html>
