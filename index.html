@@ -6,14 +6,364 @@
   <meta name="description" content="Trusted advisors and strategic thought partners to family offices and private clients—combining investment governance with hands-on corporate finance execution." />
   <meta name="robots" content="index,follow" />
   <title>We are your trusted advisors and strategic thought partners • 60 Point Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/img/favicon.ico" />
+  <style>
+    /* Pathstone-style Landing Page Styles */
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.25;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.25;
+      margin: 0;
+    }
+    
+    /* Left Rail */
+    .left-rail {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 320px;
+      background: linear-gradient(180deg, #ff6b6b 0%, #ff8e8e 50%, #ffa8a8 100%);
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      overflow-y: auto;
+    }
+    
+    .rail-brand {
+      margin-bottom: 48px;
+    }
+    
+    .rail-brand a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+    
+    .rail-brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+    
+    .rail-nav {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .rail-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+    
+    .rail-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      text-decoration: none;
+    }
+    
+    .rail-cta {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .rail-cta .btn {
+      display: block;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .rail-cta .btn-primary {
+      background: #fff;
+      color: #ff6b6b;
+      border: 2px solid #fff;
+    }
+    
+    .rail-cta .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+    }
+    
+    .rail-cta .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    
+    .rail-cta .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.15);
+      text-decoration: none;
+    }
+    
+    .rail-lang {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .rail-lang a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .rail-lang a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Main Content */
+    .main-content {
+      margin-left: 320px;
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(11, 14, 19, 0.7) 0%, rgba(11, 14, 19, 0.85) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-text {
+      color: #e7edf3;
+      text-align: center;
+    }
+    
+    .hero-text h1 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.25;
+      color: #fff;
+    }
+    
+    .hero-text p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #b7c2cf;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+    
+    /* Capabilities Card */
+    .capabilities-card {
+      position: fixed;
+      bottom: 32px;
+      left: 352px;
+      width: 360px;
+      background: rgba(15, 19, 26, 0.95);
+      backdrop-filter: saturate(140%) blur(12px);
+      border: 1px solid rgba(33, 40, 55, 0.8);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      z-index: 50;
+    }
+    
+    .capabilities-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #e7edf3;
+      margin-bottom: 16px;
+    }
+    
+    .capabilities-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .capabilities-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .capabilities-list li::before {
+      content: '→';
+      color: #66d9e8;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    
+    .capabilities-list a {
+      color: #e7edf3;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+    
+    .capabilities-list a:hover {
+      color: #66d9e8;
+      text-decoration: none;
+    }
+    
+    .capabilities-list .capability-desc {
+      color: #b7c2cf;
+      font-size: 13px;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1040px) {
+      .left-rail {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 24px 20px;
+      }
+      
+      .rail-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      
+      .rail-nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+      
+      .rail-cta {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .rail-cta .btn {
+        flex: 1;
+        min-width: 120px;
+      }
+      
+      .main-content {
+        margin-left: 0;
+      }
+      
+      .hero-content {
+        padding: 0 40px;
+      }
+      
+      .hero-text h1 {
+        font-size: 42px;
+      }
+      
+      .hero-text p {
+        font-size: 18px;
+      }
+      
+      .capabilities-card {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin: 32px 20px;
+        max-width: calc(100% - 40px);
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .hero-text h1 {
+        font-size: 32px;
+      }
+      
+      .hero-text p {
+        font-size: 16px;
+      }
+      
+      .hero-content {
+        padding: 0 24px;
+      }
+      
+      .capabilities-card {
+        margin: 24px 16px;
+        max-width: calc(100% - 32px);
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container row between middle">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo-60.svg" alt="60">60 Point Capital</a>
-    <nav class="nav">
+  <!-- Left Rail -->
+  <aside class="left-rail">
+    <div class="rail-brand">
+      <a href="/">
+        <img src="/assets/img/logo-60.svg" alt="60">
+        60 Point Capital
+      </a>
+    </div>
+    <nav class="rail-nav">
       <a href="/ocio.html">OCIO</a>
       <a href="/mandates.html">Mandates</a>
       <a href="/process.html">Process</a>
@@ -21,112 +371,54 @@
       <a href="/partners.html">Partners</a>
       <a href="/insights.html">Insights</a>
       <a href="/private-access.html">Private Access</a>
-      <a href="/hire-us.html" class="btn-outline">Hire Us</a>
-      <a href="/contact.html" class="btn">Contact</a>
-      <span class="lang-switch"><a href="/ar/index.html" aria-label="Arabic">العربية</a></span>
     </nav>
+    <div class="rail-cta">
+      <a href="/hire-us.html" class="btn btn-outline">Hire Us</a>
+      <a href="/contact.html" class="btn btn-primary">Contact</a>
+    </div>
+    <div class="rail-lang">
+      <a href="/ar/index.html" aria-label="Arabic">العربية</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="/assets/img/hero-skyscraper.jpg" alt="Hero" class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>We are your trusted advisors and strategic thought partners</h1>
+          <p>Built for family offices and the executives who run them, we combine investment governance with hands-on corporate finance execution to help you grow, protect, and institutionalize your capital.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Capabilities Card -->
+  <div class="capabilities-card">
+    <h3>Capabilities</h3>
+    <ul class="capabilities-list">
+      <li>
+        <div>
+          <a href="/ocio.html">OCIO</a>
+          <div class="capability-desc">Research-driven portfolio design and implementation</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="/mandates.html">Corporate Finance</a>
+          <div class="capability-desc">Independent advice across the deal continuum</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="/hire-us.html">Interim / Fractional CXO</a>
+          <div class="capability-desc">Top-tier interim finance leadership</div>
+        </div>
+      </li>
+    </ul>
   </div>
-</header>
-
-<main class="main">
-  <!-- HERO -->
-  <!-- HERO -->
-<section class="hero container home-hero">
-  <h1>We are your trusted advisors and strategic thought partners</h1>
-  <p>Built for family offices and the executives who run them, we combine investment governance with hands-on corporate finance execution to help you grow, protect, and institutionalize your capital.</p>
-  <div class="cta-row">
-    <a class="btn" href="/hire-us.html#request-ocio">Request OCIO Proposal</a>
-    <a class="btn-outline" href="/contact.html#intro-call">Book Introduction Call</a>
-    <a class="btn-outline" href="/private-access.html">Request Private Room Access</a>
-  </div>
-  <div class="hero-badges">
-    <span class="tag">OCIO</span>
-    <span class="tag">Corporate Finance</span>
-    <span class="tag">Private Credit</span>
-    <span class="tag">Secondaries</span>
-    <span class="tag">Co-investments</span>
-  </div>
-</section>
-
-
-  <!-- KPIs -->
-  <section class="container section">
-    <div class="kpi">
-      <div class="k"><div class="kv">Operator-led</div><div class="kl">CIO, CFO, COO experience</div></div>
-      <div class="k"><div class="kv">Mandates</div><div class="kl">OCIO, sleeves, advisory, interim CXO</div></div>
-      <div class="k"><div class="kv">Coverage</div><div class="kl">EMEA focus with global access</div></div>
-    </div>
-  </section>
-
-  <!-- THREE FEATURE CARDS -->
-  <section class="container section">
-    <div class="grid g-3">
-      <article class="card">
-        <h3>OCIO</h3>
-        <p>Research-driven portfolio design and implementation. We align asset allocation, manager selection, co-investments, and risk oversight with your governance goals—then report with clarity and cadence.</p>
-        <a href="/ocio.html" class="btn-outline">Explore OCIO</a>
-      </article>
-      <article class="card">
-        <h3>Corporate Finance</h3>
-        <p>Practical, independent advice across the deal continuum—from strategy and target evaluation to execution and exit. Hands-on support for capital raising, debt advisory, M&amp;A, and transaction services.</p>
-        <a href="/mandates.html" class="btn-outline">View Mandates</a>
-      </article>
-      <article class="card">
-        <h3>Interim / Fractional CXO</h3>
-        <p>Top-tier interim finance leadership to build momentum and deliver results: cash control, reporting, modeling, investor readiness, and board cadence. We bring strategy and alignment, then drive execution.</p>
-        <a href="/hire-us.html" class="btn-outline">Hire Us</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- WHY WORK WITH US -->
-  <section class="container section">
-    <div class="card">
-      <h3>Why work with us</h3>
-      <p>Built for family offices—and the operators who support them. We help you scale through process, technology, and specialist talent, so you can focus on what matters while we deliver the infrastructure and execution to match.</p>
-    </div>
-  </section>
-
-  <!-- COMPLIANCE -->
-  <section class="container section attention">
-    <p class="small">Professional clients only. Not investment advice. See <a href="/disclaimer.html">disclaimer</a>.</p>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="grid g-3">
-      <section>
-        <h4>Disclaimers</h4>
-        <p class="small">
-          For professional clients and eligible counterparties only. Information on this site is for discussion
-          and informational purposes and does not constitute investment advice or an offer to buy or sell any security.
-          Investments involve risk. Past performance is not indicative of future results. Availability is subject
-          to legal and regulatory restrictions. By using this site you confirm that you are a professional client
-          as defined by your local regulator.
-        </p>
-      </section>
-      <section>
-        <h4>Legal</h4>
-        <ul class="list-plain small">
-          <li><a href="/disclaimer.html">Disclaimer</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
-        </ul>
-      </section>
-      <section>
-        <h4>Contact</h4>
-        <ul class="list-plain small">
-          <li><a href="/contact.html">Contact form</a></li>
-          <li><a href="/hire-us.html">RFP / Hire Us</a></li>
-        </ul>
-      </section>
-    </div>
-    <div class="footer-meta small">
-      <span>© 60 Point Capital. All rights reserved.</span>
-      <span>Dubai, UAE</span>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
