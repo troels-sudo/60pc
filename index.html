@@ -3,63 +3,279 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>60 Point Capital</title>
+  <meta name="description" content="60 Point Capital provides research-driven investment advisory services for foundations, endowments, family offices and private clients. Outcome-focused portfolio management and strategic financial planning." />
+  <meta name="theme-color" content="#E74A45" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="60 Point Capital" />
+  <meta property="og:description" content="Research-driven. Outcome-focused. Invested in your success." />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="60 Point Capital" />
+  <meta name="twitter:description" content="Research-driven. Outcome-focused. Invested in your success." />
+  
+  <title>60 Point Capital | Research-Driven Investment Advisory</title>
+  
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Font Preload for Critical Fonts -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXpsog.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Font Stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <style>
   :root {
     --brand-red: #E74A45;
     --brand-red-dark: #C83F3A;
   }
+  
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: Inter, sans-serif; line-height: 1.25; }
+  
+  body { 
+    margin: 0; 
+    font-family: Inter, sans-serif; 
+    line-height: 1.25; 
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Skip Link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--brand-red);
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Layout */
   .layout { display: flex; min-height: 100vh; }
-  aside { width: 280px; background: linear-gradient(180deg, var(--brand-red), var(--brand-red-dark)); color: #fff; padding: 20px; flex-shrink: 0; }
-  .logo { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; margin-bottom: 20px; }
-  nav a { display: block; padding: 10px 0; color: #fff; text-decoration: none; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.3); }
+  
+  /* Sidebar */
+  aside { 
+    width: 280px; 
+    background: linear-gradient(180deg, var(--brand-red), var(--brand-red-dark)); 
+    color: #fff; 
+    padding: 20px; 
+    flex-shrink: 0; 
+  }
+  
+  .logo { 
+    font-family: Montserrat, sans-serif; 
+    font-weight: 900; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+  }
+  
+  /* Navigation */
+  nav a { 
+    display: block; 
+    padding: 10px 0; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    transition: opacity 0.2s ease;
+  }
+  
   nav a:first-child { border-top: 0; }
-  nav .cta { margin-top: 10px; padding: 10px 0; background: #fff; color: var(--brand-red); border-radius: 8px; text-align: center; font-weight: 800; text-decoration: none; }
-  main { flex-grow: 1; position: relative; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background: url('assets/img/hero-skyscraper.jpg') center/cover no-repeat; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1)); }
-  .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 80px 40px; color: #fff; }
-  .hero-content h1 { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 48px; margin: 0 0 20px; line-height: 1.1; }
-  .hero-content p { font-size: 18px; max-width: 600px; }
-  .capabilities { position: absolute; bottom: 20px; left: 20px; background: var(--brand-red); padding: 15px; border-radius: 12px; max-width: 260px; }
-  .capabilities h3 { margin: 0 0 10px; font-family: Montserrat; font-weight: 900; font-size: 18px; }
-  .capabilities ul { list-style: none; margin: 0; padding: 0; font-size: 14px; }
-  .capabilities li { border-top: 1px solid rgba(255,255,255,0.3); padding: 6px 0; }
+  
+  nav a:hover {
+    opacity: 0.8;
+  }
+  
+  nav a:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  nav .cta { 
+    margin-top: 10px; 
+    padding: 10px 0; 
+    background: #fff; 
+    color: var(--brand-red); 
+    border-radius: 8px; 
+    text-align: center; 
+    font-weight: 800; 
+    text-decoration: none; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  nav .cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  nav .cta:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+  }
+  
+  /* Main Content */
+  main { 
+    flex-grow: 1; 
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  /* Hero Background - Optimized with fallback color to prevent CLS */
+  .hero-bg { 
+    position: absolute; 
+    inset: 0; 
+    background: url('assets/img/hero-skyscraper.jpg') center/cover no-repeat; 
+    background-color: #0b0e13; /* Fallback color to prevent layout shift */
+  }
+  
+  .hero-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1)); 
+  }
+  
+  .hero-content { 
+    position: relative; 
+    z-index: 1; 
+    max-width: 800px; 
+    padding: 80px 40px; 
+    color: #fff; 
+  }
+  
+  .hero-content > div:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+  
+  .hero-content h1 { 
+    font-family: Montserrat, sans-serif; 
+    font-weight: 900; 
+    font-size: 48px; 
+    margin: 0 0 20px; 
+    line-height: 1.1; 
+  }
+  
+  .hero-content p { 
+    font-size: 18px; 
+    max-width: 600px; 
+    line-height: 1.4;
+  }
+  
+  /* Capabilities Section */
+  .capabilities { 
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    background: var(--brand-red); 
+    padding: 15px; 
+    border-radius: 12px; 
+    max-width: 260px; 
+  }
+  
+  .capabilities h3 { 
+    margin: 0 0 10px; 
+    font-family: Montserrat, sans-serif; 
+    font-weight: 900; 
+    font-size: 18px; 
+  }
+  
+  .capabilities ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 14px; 
+  }
+  
+  .capabilities li { 
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    padding: 6px 0; 
+  }
+  
+  .capabilities li:first-child {
+    border-top: 0;
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Responsive */
   @media (max-width: 900px) {
     aside { width: 100%; }
     .layout { flex-direction: column; }
     .hero-content { padding: 40px 20px; }
+    .hero-content h1 { font-size: 36px; }
+    .capabilities {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      margin: 20px;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hero-content h1 { font-size: 28px; }
+    .hero-content p { font-size: 16px; }
   }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <div class="layout">
     <aside>
       <div class="logo">60 Point Capital</div>
-      <nav>
-        <a href="#">+ LEARN ABOUT US</a>
-        <a href="#">+ READ INSIGHTS</a>
-        <a href="#">+ MEET OUR PEOPLE</a>
-        <a href="#">+ ATTEND AN EVENT</a>
-        <a href="#">+ ACCESS CLIENT PORTAL</a>
-        <a class="cta" href="#">START A CONVERSATION</a>
+      <nav aria-label="Main navigation">
+        <a href="/index.html">+ LEARN ABOUT US</a>
+        <a href="/insights.html">+ READ INSIGHTS</a>
+        <a href="/team.html">+ MEET OUR PEOPLE</a>
+        <a href="/events.html">+ ATTEND AN EVENT</a>
+        <a href="/private-access.html">+ ACCESS CLIENT PORTAL</a>
+        <a class="cta" href="/contact.html">START A CONVERSATION</a>
       </nav>
     </aside>
-    <main>
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
+    
+    <main id="main-content">
+      <div class="hero-bg" role="img" aria-label="Modern skyscraper cityscape"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      
       <div class="hero-content">
         <div>WHAT WE DO</div>
         <h1>Research-driven.<br>Outcome-focused.<br>Invested in your success.</h1>
         <p>We partner with foundations, endowments, family offices and private clients to deliver disciplined investment advisory services, customized portfolio construction, deep research and risk management.</p>
       </div>
-      <div class="capabilities">
-        <h3>Our Capabilities</h3>
+      
+      <section class="capabilities" aria-labelledby="capabilities-heading">
+        <h3 id="capabilities-heading">Our Capabilities</h3>
         <ul>
           <li>Vision & values discovery</li>
           <li>Strategic financial planning & modeling</li>
@@ -68,7 +284,7 @@
           <li>Liquidity & cash-flow planning</li>
           <li>Insurance, risk & cybersecurity</li>
         </ul>
-      </div>
+      </section>
     </main>
   </div>
 </body>

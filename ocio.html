@@ -8,27 +8,74 @@
   <title>OCIO • 60 Point Capital</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/img/favicon.ico" />
+  <style>
+  :root {
+    --brand-red: #E74A45;
+    --brand-red-dark: #C83F3A;
+  }
+  .layout { display: flex; min-height: 100vh; }
+  aside { 
+    width: 280px; 
+    background: linear-gradient(180deg, var(--brand-red), var(--brand-red-dark)); 
+    color: #fff; 
+    padding: 20px; 
+    flex-shrink: 0; 
+  }
+  .logo { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 900; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+  }
+  aside nav a { 
+    display: block; 
+    padding: 10px 0; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-top: 1px solid rgba(255,255,255,0.3); 
+  }
+  aside nav a:first-child { border-top: 0; }
+  aside nav a:hover { opacity: 0.8; }
+  aside nav a:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  aside nav .cta { 
+    margin-top: 10px; 
+    padding: 10px 0; 
+    background: #fff; 
+    color: var(--brand-red); 
+    border-radius: 8px; 
+    text-align: center; 
+    font-weight: 800; 
+  }
+  aside nav .cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .layout main { flex-grow: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    aside { width: 100%; }
+    .layout { flex-direction: column; }
+  }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container row between middle">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/img/logo-60.svg" alt="60">60 Point Capital</a>
-    <nav class="nav">
-      <a href="/ocio.html">OCIO</a>
-      <a href="/mandates.html">Mandates</a>
-      <a href="/process.html">Process</a>
-      <a href="/team.html">Team</a>
-      <a href="/partners.html">Partners</a>
-      <a href="/insights.html">Insights</a>
-      <a href="/private-access.html">Private Access</a>
-      <a href="/hire-us.html" class="btn-outline">Hire Us</a>
-      <a href="/contact.html" class="btn">Contact</a>
-      <span class="lang-switch"><a href="/ar/index.html" aria-label="Arabic">العربية</a></span>
-    </nav>
-  </div>
-</header>
-
-<main class="main">
+  <div class="layout">
+    <aside>
+      <div class="logo">60 Point Capital</div>
+      <nav aria-label="Main navigation">
+        <a href="/index.html">+ LEARN ABOUT US</a>
+        <a href="/insights.html">+ READ INSIGHTS</a>
+        <a href="/team.html">+ MEET OUR PEOPLE</a>
+        <a href="/events.html">+ ATTEND AN EVENT</a>
+        <a href="/private-access.html">+ ACCESS CLIENT PORTAL</a>
+        <a class="cta" href="/contact.html">START A CONVERSATION</a>
+      </nav>
+    </aside>
+    <main class="main">
   <section class="container hero">
    <span class="tag">For professional clients only</span>
     <h1>OCIO</h1>
@@ -97,5 +144,7 @@
     </div>
   </div>
 </footer>
+    </main>
+  </div>
 </body>
 </html>
