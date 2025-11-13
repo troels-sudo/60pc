@@ -3,72 +3,229 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="60 Point Capital provides research-driven investment advisory services for foundations, endowments, family offices and private clients. Outcome-focused portfolio management and strategic financial planning." />
+  <meta name="description" content="60 Point Capital provides specialized expertise in private credit, secondaries, co-investments & corporate finance. Choose the site experience most relevant to you." />
   <meta name="theme-color" content="#E74A45" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="60 Point Capital" />
-  <meta property="og:description" content="Research-driven. Outcome-focused. Invested in your success." />
+  <meta property="og:description" content="Specialized expertise. Private credit, secondaries, co-investments & corporate finance." />
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="60 Point Capital" />
-  <meta name="twitter:description" content="Research-driven. Outcome-focused. Invested in your success." />
+  <meta name="twitter:description" content="Specialized expertise. Private credit, secondaries, co-investments & corporate finance." />
   
-  <title>60 Point Capital | Research-Driven Investment Advisory</title>
+  <title>60 Point Capital | Specialized Expertise</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/theme.css">
   
   <style>
-  /* Index-specific styles */
-  main { 
-    position: relative; 
-    overflow: hidden; 
+  /* Audience selector landing page styles */
+  .audience-landing {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--brand-red), var(--brand-red-dark));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 60px 60px;
+    position: relative;
+  }
+  
+  .audience-landing .logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+  
+  .audience-landing h1 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    color: #fff;
+  }
+  
+  .audience-landing .tagline {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  
+  .audience-landing .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    opacity: 0.95;
+    line-height: 1.4;
+  }
+  
+  .audience-landing .selector-heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+  
+  .audience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .audience-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .audience-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .audience-card:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+  }
+  
+  .audience-card h2 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 28px;
+    margin: 0 0 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .audience-card h2::before {
+    content: "+";
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  
+  .audience-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.95;
+  }
+  
+  .wordmark {
+    margin-top: auto;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    opacity: 0.8;
+    padding-top: 40px;
+  }
+  
+  @media (max-width: 900px) {
+    .audience-landing {
+      padding: 60px 40px 40px;
+    }
+    
+    .audience-landing h1 {
+      font-size: 48px;
+    }
+    
+    .audience-landing .tagline {
+      font-size: 20px;
+    }
+    
+    .audience-landing .subtitle {
+      font-size: 18px;
+    }
+    
+    .audience-cards {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    
+    .wordmark {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .audience-landing {
+      padding: 40px 24px 32px;
+    }
+    
+    .audience-landing h1 {
+      font-size: 36px;
+    }
+    
+    .audience-landing .tagline {
+      font-size: 18px;
+    }
+    
+    .audience-landing .subtitle {
+      font-size: 16px;
+    }
+    
+    .audience-card {
+      padding: 24px;
+    }
+    
+    .audience-card h2 {
+      font-size: 24px;
+    }
   }
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <div class="layout">
-    <aside>
-      <div class="logo">60 Point Capital</div>
-      <nav>
-        <a href="index.html">+ LEARN ABOUT US</a>
-        <a href="insights.html">+ READ INSIGHTS</a>
-        <a href="team.html">+ MEET OUR PEOPLE</a>
-        <a href="events.html">+ ATTEND AN EVENT</a>
-        <a href="private-access.html">+ ACCESS CLIENT PORTAL</a>
-        <a class="cta" href="contact.html">START A CONVERSATION</a>
-      </nav>
-    </aside>
+  <div class="audience-landing" id="main-content">
+    <div class="logo">60 Point Capital</div>
     
-    <main id="main-content">
-      <div class="hero-bg" role="img" aria-label="Modern skyscraper cityscape"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+    <h1>Welcome to 60 Point Capital.</h1>
+    <div class="tagline">Specialized expertise.</div>
+    <div class="subtitle">Private credit, secondaries, co‑investments & corporate finance.</div>
+    
+    <div class="selector-heading">CHOOSE THE SITE EXPERIENCE MOST RELEVANT TO YOU:</div>
+    
+    <div class="audience-cards">
+      <a href="individuals.html" class="audience-card">
+        <h2>Individuals & Families</h2>
+        <p>For individuals or families navigating significant, multigenerational wealth and seeking a trusted partner for stewardship, strategy, and legacy.</p>
+      </a>
       
-      <div class="hero-content">
-        <div>WHAT WE DO</div>
-        <h1>Research-driven.<br>Outcome-focused.<br>Invested in your success.</h1>
-        <p>We partner with foundations, endowments, family offices and private clients to deliver disciplined investment advisory services, customized portfolio construction, deep research and risk management.</p>
-      </div>
+      <a href="family-offices.html" class="audience-card">
+        <h2>Family Offices</h2>
+        <p>For privately held companies managing the financial, legal and personal affairs of a wealthy family, providing tailored support with discretion and foresight.</p>
+      </a>
       
-      <section class="capabilities" aria-labelledby="capabilities-heading">
-        <h3 id="capabilities-heading">Our Capabilities</h3>
-        <ul>
-          <li>Vision & values discovery</li>
-          <li>Strategic financial planning & modeling</li>
-          <li>Investment strategy & management</li>
-          <li>Portfolio management & asset allocation</li>
-          <li>Liquidity & cash-flow planning</li>
-          <li>Insurance, risk & cybersecurity</li>
-        </ul>
-      </section>
-    </main>
+      <a href="institutions.html" class="audience-card">
+        <h2>Institutions</h2>
+        <p>For mission-driven foundations, endowments, pensions or corporates seeking strategic financial oversight, governance support and long-term impact.</p>
+      </a>
+    </div>
+    
+    <div class="wordmark">60 Point Capital</div>
   </div>
 </body>
 </html>
