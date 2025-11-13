@@ -210,12 +210,7 @@ p {
   line-height: 1.4;
 }
 
-/* Content Sections */
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
+/* Content Sections - moved to consolidated definition above */
 
 .section {
   margin: 40px 0;
@@ -224,12 +219,83 @@ p {
 .hero {
   padding: 64px 0;
 }
-.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
-h1 { font-family: var(--font-heading); font-weight: 900; font-size: 2.5rem; margin-bottom: 16px; }
-h2 { font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; margin-top: 40px; }
-p { margin-bottom: 1rem; }
-.cta-button { border: 2px solid var(--brand-red); color: var(--brand-red); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; margin-right: 12px; }
-.card { border: 1px solid rgba(0,0,0,0.1); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+
+/* Container - consolidated definition */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Heading styles - consolidated */
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+/* Eyebrow text */
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  display: block;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid var(--brand-red);
+  color: var(--brand-red);
+  background: transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.cta-button:hover {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid var(--brand-red);
+  outline-offset: 2px;
+}
 
 /* Grid and Cards */
 .grid {
@@ -347,6 +413,10 @@ textarea {
   padding: 40px 0 24px;
   border-top: 1px solid #e0e0e0;
   margin-top: 60px;
+}
+
+.site-footer .grid {
+  margin-bottom: 24px;
 }
 
 .footer-meta {
