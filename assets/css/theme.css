@@ -17,6 +17,16 @@ body {
   line-height: 1.25; 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: #111;
+  background: #f9f9f8;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-primary);
 }
 
 /* Skip Link */
@@ -266,6 +276,49 @@ p {
   padding: 64px 0;
 }
 
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.35));
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.hero-section .hero-content h1,
+.hero-section .hero-content p,
+.hero-section .hero-content .eyebrow {
+  color: #fff;
+}
+
+.hero-section .hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.text-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #1c1c1c;
+}
+
 /* Container - consolidated definition */
 .container {
   max-width: 1120px;
@@ -343,6 +396,16 @@ h4 {
   outline-offset: 2px;
 }
 
+.cta-button.is-solid {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.cta-button.is-solid:hover {
+  background: var(--brand-red-dark);
+  color: #fff;
+}
+
 button.cta-button {
   cursor: pointer;
   font-family: var(--font-primary);
@@ -379,6 +442,40 @@ button.cta-button {
 
 .card h3 a:hover {
   color: var(--brand-red);
+}
+
+.capabilities-card {
+  margin-top: 32px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+aside .capabilities-card:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.capabilities-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.capabilities-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+}
+
+.capabilities-card li + li {
+  margin-top: 8px;
 }
 
 /* Typography utilities */
@@ -531,66 +628,13 @@ textarea {
     margin: 20px;
     max-width: 100%;
   }
-}
-
-/* Audience Hero Sections */
-.audience-hero {
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.audience-hero-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #0b0e13;
-}
-
-.audience-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
-}
-
-.audience-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 80px 40px;
-  color: #fff;
-}
-
-.audience-hero-content h1 {
-  color: #fff;
-  margin-bottom: 24px;
-}
-
-.audience-hero-content p {
-  font-size: 20px;
-  line-height: 1.5;
-  max-width: 700px;
-  opacity: 0.95;
-}
-
-@media (max-width: 900px) {
-  .audience-hero {
+  .hero-section {
     min-height: 50vh;
   }
-  
-  .audience-hero-content {
-    padding: 60px 20px;
+  .hero-section .hero-content {
+    padding: 60px 0;
   }
-  
-  .audience-hero-content h1 {
-    font-size: 36px;
-  }
-  
-  .audience-hero-content p {
+  .hero-section .hero-content p {
     font-size: 18px;
   }
 }
@@ -605,13 +649,5 @@ textarea {
   h1 { font-size: 32px; }
   h2 { font-size: 24px; }
   h3 { font-size: 20px; }
-  
-  .audience-hero-content h1 {
-    font-size: 32px;
-  }
-  
-  .audience-hero-content p {
-    font-size: 16px;
-  }
 }
 
